@@ -13,6 +13,6 @@ jobs:
       - name: clear npm
         run: npm ci
       - name: install dependencies
-        run: npm instll
+        run: npm install
       - name: run tests
         run: npm run test

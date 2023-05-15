@@ -1,6 +1,6 @@
 name: Publics statics
 on:
-  merge:
+  push:
     branches: [main]
 jobs:
   publish:

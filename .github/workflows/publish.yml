@@ -1,0 +1,17 @@
+name: Publics statics
+on:
+  push:
+    branches: [main]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository and chackout branch
+        uses: actions/checkout@v3
+      - name: Deploy to bouncy-beggar.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: "bouncy-beggar.surge.sh"
+          project: "statics"
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
